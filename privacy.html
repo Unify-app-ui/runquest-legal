@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — RunQuest</title>
+  <meta name="description" content="Politique de confidentialité de l'application RunQuest : données collectées, finalités, droits RGPD, sous-traitants.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="./" class="logo">Run<span>Quest</span></a>
+    </div>
+  </header>
+  <main class="container">
+    <nav class="breadcrumb"><a href="./">Documents légaux</a> &nbsp;/&nbsp; Politique de confidentialité</nav>
+    <h1>Politique de confidentialité</h1>
+    <p class="subtitle">Dernière mise à jour : 28 avril 2026</p>
+
+    <section class="toc">
+      <h2>Sommaire</h2>
+      <ol>
+        <li><a href="#responsable">Responsable du traitement</a></li>
+        <li><a href="#donnees">Données collectées</a></li>
+        <li><a href="#finalites">Finalités et bases légales</a></li>
+        <li><a href="#sous-traitants">Sous-traitants et destinataires</a></li>
+        <li><a href="#transferts">Transferts hors Union européenne</a></li>
+        <li><a href="#duree">Durée de conservation</a></li>
+        <li><a href="#securite">Sécurité</a></li>
+        <li><a href="#droits">Vos droits</a></li>
+        <li><a href="#gps">Sensibilité des traces GPS</a></li>
+        <li><a href="#modifications">Modifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </section>
+
+    <h2 id="responsable">1. Responsable du traitement</h2>
+    <p>Le responsable du traitement des données collectées et traitées via l'application RunQuest est :</p>
+    <p>
+      <strong>Cédric Magnien</strong><br>
+      16 rue de l'Ouche Chenneau<br>
+      44230 Saint-Sébastien-sur-Loire<br>
+      France<br>
+      Email : <a href="mailto:runquest.contact@gmail.com">runquest.contact@gmail.com</a>
+    </p>
+
+    <h2 id="donnees">2. Données collectées</h2>
+    <p>RunQuest collecte uniquement les données strictement nécessaires au fonctionnement du service. À ce jour, l'application <strong>n'utilise aucun outil d'analyse comportementale (analytics), aucun système de notifications push, ni aucun outil de suivi de plantage (crash reporting)</strong>.</p>
+
+    <h3>2.1 Données issues de votre compte Strava</h3>
+    <p>Lors de la connexion via OAuth Strava, nous collectons :</p>
+    <ul>
+      <li>Votre adresse email associée à votre compte Strava</li>
+      <li>Votre identifiant Strava (athlete ID)</li>
+      <li>Votre prénom et nom tels qu'enregistrés sur votre profil Strava</li>
+      <li>Les jetons d'authentification (access token, refresh token) nécessaires à la synchronisation, stockés de manière sécurisée</li>
+    </ul>
+
+    <h3>2.2 Données issues de vos activités sportives</h3>
+    <p>Pour chaque activité sportive importée depuis Strava, nous collectons :</p>
+    <ul>
+      <li>Les métadonnées de l'activité : date, durée, distance, type d'activité, dénivelé, allure</li>
+      <li>La trace GPS détaillée du parcours (séquence de coordonnées géographiques)</li>
+    </ul>
+
+    <h3>2.3 Données générées par le service</h3>
+    <ul>
+      <li>Les cellules (carrés de 100 m × 100 m) traversées et débloquées par vos activités</li>
+      <li>Les statistiques calculées sur la base de vos activités (total de carrés débloqués, progression par zone géographique, etc.)</li>
+    </ul>
+
+    <h2 id="finalites">3. Finalités et bases légales</h2>
+    <table>
+      <thead>
+        <tr><th>Finalité</th><th>Base légale (RGPD)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fournir le service de carte quadrillée et de progression personnelle</td><td>Exécution du contrat (Art. 6.1.b)</td></tr>
+        <tr><td>Synchroniser vos activités depuis Strava</td><td>Exécution du contrat (Art. 6.1.b)</td></tr>
+        <tr><td>Maintenir votre compte utilisateur</td><td>Exécution du contrat (Art. 6.1.b)</td></tr>
+        <tr><td>Répondre à vos demandes (support, exercice des droits)</td><td>Obligation légale (Art. 6.1.c)</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="sous-traitants">4. Sous-traitants et destinataires</h2>
+    <p>Vos données sont accessibles uniquement par l'éditeur (Cédric Magnien) et les sous-traitants techniques listés ci-dessous, qui agissent sur instructions et en conformité avec leurs propres obligations RGPD :</p>
+    <ul>
+      <li><strong>Strava, Inc.</strong> — Source des données sportives. La connexion à votre compte Strava s'effectue directement avec leurs serveurs via leur API officielle. <a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener">Politique de confidentialité Strava</a></li>
+      <li><strong>Supabase Inc.</strong> — Hébergement de la base de données et de l'infrastructure backend. Région d'hébergement des données : Union européenne (France). <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Politique de confidentialité Supabase</a></li>
+      <li><strong>Apple Inc.</strong> et <strong>Google LLC</strong> — Distribution de l'application mobile via l'App Store et Google Play.</li>
+      <li><strong>GitHub, Inc.</strong> — Hébergement des présentes pages légales via GitHub Pages.</li>
+    </ul>
+    <p>Vos données ne sont jamais vendues, louées ni cédées à des tiers à des fins commerciales ou publicitaires.</p>
+
+    <h2 id="transferts">5. Transferts hors Union européenne</h2>
+    <p>L'hébergement principal de vos données (Supabase) est situé en France, au sein de l'Union européenne.</p>
+    <p>Toutefois, certaines opérations peuvent impliquer des sous-traitants situés hors UE, en particulier :</p>
+    <ul>
+      <li>Strava, Inc. (États-Unis) — connexion directe à votre demande pour récupérer vos activités</li>
+      <li>Apple, Google, GitHub — services de distribution et d'hébergement</li>
+    </ul>
+    <p>Ces transferts s'effectuent sur la base des garanties appropriées prévues par le RGPD (clauses contractuelles types, Data Privacy Framework lorsque applicable).</p>
+
+    <h2 id="duree">6. Durée de conservation</h2>
+    <ul>
+      <li><strong>Pendant l'utilisation du service</strong> : vos données sont conservées tant que votre compte est actif.</li>
+      <li><strong>Après suppression de compte</strong> : vos données sont conservées pendant <strong>30 jours</strong>, puis définitivement effacées de nos bases. Cette durée permet de gérer les éventuelles demandes de récupération en cas de suppression accidentelle.</li>
+      <li><strong>Jetons Strava</strong> : conservés tant que la connexion Strava est active. Vous pouvez révoquer cet accès à tout moment depuis les paramètres de votre compte Strava.</li>
+    </ul>
+
+    <h2 id="securite">7. Sécurité</h2>
+    <p>Nous mettons en œuvre des mesures techniques et organisationnelles adaptées pour protéger vos données :</p>
+    <ul>
+      <li>Chiffrement des communications (HTTPS / TLS)</li>
+      <li>Stockage sécurisé des jetons d'authentification</li>
+      <li>Accès restreint aux bases de données par authentification forte</li>
+      <li>Hébergement chez des prestataires conformes aux standards de sécurité actuels</li>
+    </ul>
+
+    <h2 id="droits">8. Vos droits</h2>
+    <p>Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> — obtenir la copie des données vous concernant</li>
+      <li><strong>Droit de rectification</strong> — corriger une donnée inexacte</li>
+      <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données</li>
+      <li><strong>Droit à la limitation</strong> — demander la suspension d'un traitement</li>
+      <li><strong>Droit d'opposition</strong> — vous opposer à un traitement</li>
+      <li><strong>Droit à la portabilité</strong> — récupérer vos données dans un format structuré</li>
+      <li><strong>Droit de retirer votre consentement</strong> à tout moment, sans remettre en cause la licéité des traitements antérieurs</li>
+      <li><strong>Droit d'introduire une réclamation</strong> auprès de la CNIL (<a href="https://www.cnil.fr/" target="_blank" rel="noopener">cnil.fr</a>)</li>
+    </ul>
+    <p>Pour exercer ces droits, contactez-nous à : <a href="mailto:runquest.contact@gmail.com">runquest.contact@gmail.com</a></p>
+    <p>Une réponse vous sera apportée dans un délai maximum d'un mois à compter de la réception de votre demande.</p>
+
+    <h2 id="gps">9. Sensibilité des traces GPS</h2>
+    <div class="callout">
+      <p><strong>Une attention particulière est portée aux traces GPS.</strong> Ces données révèlent vos lieux fréquentés, votre domicile, votre lieu de travail, vos habitudes et horaires. Il s'agit de données particulièrement sensibles.</p>
+    </div>
+    <p>Nos engagements concernant ces données :</p>
+    <ul>
+      <li>Vos traces GPS ne sont jamais partagées avec des tiers à des fins commerciales</li>
+      <li>Aucun affichage public de vos traces n'est effectué sans votre consentement explicite</li>
+      <li>Une option permettant de rendre votre carte privée est intégrée à l'application</li>
+      <li>Une fonctionnalité de masquage des zones sensibles (autour de votre domicile notamment) sera proposée dans une version ultérieure</li>
+    </ul>
+
+    <h2 id="modifications">10. Modifications de la politique</h2>
+    <p>La présente politique peut être amenée à évoluer, notamment pour refléter les évolutions du service ou de la réglementation. La date de dernière mise à jour figure en haut du document. En cas de modification substantielle, vous serez informé via l'application ou par email.</p>
+
+    <h2 id="contact">11. Contact</h2>
+    <p>Pour toute question relative à la présente politique ou au traitement de vos données :</p>
+    <p>
+      Email : <a href="mailto:runquest.contact@gmail.com">runquest.contact@gmail.com</a><br>
+      Courrier : Cédric Magnien — 16 rue de l'Ouche Chenneau — 44230 Saint-Sébastien-sur-Loire
+    </p>
+  </main>
+  <footer>
+    <div class="container">
+      <a href="./">← Retour aux documents légaux</a>
+    </div>
+  </footer>
+</body>
+</html>
