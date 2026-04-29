@@ -30,6 +30,8 @@
         <li><a href="#securite">Sécurité</a></li>
         <li><a href="#droits">Vos droits</a></li>
         <li><a href="#gps">Sensibilité des traces GPS</a></li>
+        <li><a href="#cookies">Cookies et traceurs</a></li>
+        <li><a href="#mineurs">Utilisateurs mineurs</a></li>
         <li><a href="#modifications">Modifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ol>
@@ -38,12 +40,10 @@
     <h2 id="responsable">1. Responsable du traitement</h2>
     <p>Le responsable du traitement des données collectées et traitées via l'application RunQuest est :</p>
     <p>
-      <strong>Cédric Magnien</strong><br>
-      16 rue de l'Ouche Chenneau<br>
-      44230 Saint-Sébastien-sur-Loire<br>
-      France<br>
+      <strong>Cédric Magnien</strong> (particulier)<br>
       Email : <a href="mailto:runquest.contact@gmail.com">runquest.contact@gmail.com</a>
     </p>
+    <p>L'adresse postale a été communiquée à l'hébergeur de l'application, conformément à l'article 6-III-2 LCEN. Voir les <a href="legal.html">mentions légales</a> pour plus de détails.</p>
 
     <h2 id="donnees">2. Données collectées</h2>
     <p>RunQuest collecte uniquement les données strictement nécessaires au fonctionnement du service. À ce jour, l'application <strong>n'utilise aucun outil d'analyse comportementale (analytics), aucun système de notifications push, ni aucun outil de suivi de plantage (crash reporting)</strong>.</p>
@@ -64,11 +64,22 @@
       <li>La trace GPS détaillée du parcours (séquence de coordonnées géographiques)</li>
     </ul>
 
-    <h3>2.3 Données générées par le service</h3>
+    <h3>2.3 Données techniques</h3>
+    <ul>
+      <li>Informations de session : jetons d'authentification stockés de manière chiffrée (Expo SecureStore / Keychain iOS / Keystore Android côté appareil, Supabase Vault côté serveur)</li>
+      <li>Identifiant d'appareil (généré par le système) pour la gestion de session</li>
+      <li>Journaux techniques anonymisés en cas d'erreur (debug logs, conservés 30 jours maximum)</li>
+    </ul>
+
+    <h3>2.4 Données générées par le service</h3>
     <ul>
       <li>Les cellules (carrés de 100 m × 100 m) traversées et débloquées par vos activités</li>
       <li>Les statistiques calculées sur la base de vos activités (total de carrés débloqués, progression par zone géographique, etc.)</li>
     </ul>
+
+    <div class="callout">
+      <p>Aucune donnée bancaire n'est collectée par l'application. La version actuelle (MVP) est entièrement gratuite et ne nécessite aucun moyen de paiement.</p>
+    </div>
 
     <h2 id="finalites">3. Finalités et bases légales</h2>
     <table>
@@ -86,9 +97,10 @@
     <h2 id="sous-traitants">4. Sous-traitants et destinataires</h2>
     <p>Vos données sont accessibles uniquement par l'éditeur (Cédric Magnien) et les sous-traitants techniques listés ci-dessous, qui agissent sur instructions et en conformité avec leurs propres obligations RGPD :</p>
     <ul>
-      <li><strong>Strava, Inc.</strong> — Source des données sportives. La connexion à votre compte Strava s'effectue directement avec leurs serveurs via leur API officielle. <a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener">Politique de confidentialité Strava</a></li>
-      <li><strong>Supabase Inc.</strong> — Hébergement de la base de données et de l'infrastructure backend. Région d'hébergement des données : Union européenne (France). <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Politique de confidentialité Supabase</a></li>
-      <li><strong>Apple Inc.</strong> et <strong>Google LLC</strong> — Distribution de l'application mobile via l'App Store et Google Play.</li>
+      <li><strong>Strava, Inc.</strong> — Source des données sportives. La connexion à votre compte Strava s'effectue directement avec leurs serveurs via leur API officielle, dans les limites des autorisations OAuth accordées. <a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener">Politique de confidentialité Strava</a></li>
+      <li><strong>Supabase, Inc.</strong> — Hébergement de la base de données et de l'infrastructure backend, sur infrastructure Amazon Web Services (AWS). Région d'hébergement : Union européenne (France). <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Politique de confidentialité Supabase</a></li>
+      <li><strong>Apple Distribution International Limited</strong> et <strong>Google Ireland Limited</strong> — Distribution de l'application mobile via l'App Store et Google Play.</li>
+      <li><strong>OpenStreetMap Foundation</strong> — Fonds cartographiques affichés dans l'application. Aucune donnée personnelle ne leur est transmise.</li>
       <li><strong>GitHub, Inc.</strong> — Hébergement des présentes pages légales via GitHub Pages.</li>
     </ul>
     <p>Vos données ne sont jamais vendues, louées ni cédées à des tiers à des fins commerciales ou publicitaires.</p>
@@ -112,9 +124,10 @@
     <h2 id="securite">7. Sécurité</h2>
     <p>Nous mettons en œuvre des mesures techniques et organisationnelles adaptées pour protéger vos données :</p>
     <ul>
-      <li>Chiffrement des communications (HTTPS / TLS)</li>
-      <li>Stockage sécurisé des jetons d'authentification</li>
-      <li>Accès restreint aux bases de données par authentification forte</li>
+      <li>Chiffrement des communications via TLS (HTTPS)</li>
+      <li>Stockage chiffré des jetons OAuth Strava (Supabase Vault côté serveur, Expo SecureStore / Keychain iOS / Keystore Android côté appareil)</li>
+      <li>Politiques d'accès strictes côté base de données (Row Level Security)</li>
+      <li>Sauvegardes régulières et supervision des incidents</li>
       <li>Hébergement chez des prestataires conformes aux standards de sécurité actuels</li>
     </ul>
 
@@ -145,15 +158,19 @@
       <li>Une fonctionnalité de masquage des zones sensibles (autour de votre domicile notamment) sera proposée dans une version ultérieure</li>
     </ul>
 
-    <h2 id="modifications">10. Modifications de la politique</h2>
-    <p>La présente politique peut être amenée à évoluer, notamment pour refléter les évolutions du service ou de la réglementation. La date de dernière mise à jour figure en haut du document. En cas de modification substantielle, vous serez informé via l'application ou par email.</p>
+    <h2 id="cookies">10. Cookies et traceurs</h2>
+    <p>L'application mobile n'utilise pas de cookies au sens du droit applicable au web. Les seuls identifiants techniques stockés localement sont les jetons d'authentification, indispensables au fonctionnement du service, et stockés de manière sécurisée (Expo SecureStore / Keychain iOS / Keystore Android).</p>
+    <p>Aucun outil de mesure d'audience tiers (Google Analytics, Firebase Analytics, etc.) n'est intégré dans la version actuelle.</p>
 
-    <h2 id="contact">11. Contact</h2>
+    <h2 id="mineurs">11. Utilisateurs mineurs</h2>
+    <p>L'application n'est pas destinée aux personnes de moins de 16 ans. L'éditeur ne collecte pas sciemment de données concernant des mineurs de moins de 16 ans sans le consentement de leurs responsables légaux. Si vous pensez qu'un mineur a créé un compte, contactez-nous à <a href="mailto:runquest.contact@gmail.com">runquest.contact@gmail.com</a> afin que nous procédions à la suppression des données concernées.</p>
+
+    <h2 id="modifications">12. Modifications de la politique</h2>
+    <p>La présente politique peut être amenée à évoluer, notamment pour refléter les évolutions du service ou de la réglementation. La date de dernière mise à jour figure en haut du document. En cas de modification substantielle, vous serez informé via l'application ou par email au moins 30 jours avant son entrée en vigueur.</p>
+
+    <h2 id="contact">13. Contact</h2>
     <p>Pour toute question relative à la présente politique ou au traitement de vos données :</p>
-    <p>
-      Email : <a href="mailto:runquest.contact@gmail.com">runquest.contact@gmail.com</a><br>
-      Courrier : Cédric Magnien — 16 rue de l'Ouche Chenneau — 44230 Saint-Sébastien-sur-Loire
-    </p>
+    <p>Email : <a href="mailto:runquest.contact@gmail.com">runquest.contact@gmail.com</a></p>
   </main>
   <footer>
     <div class="container">
