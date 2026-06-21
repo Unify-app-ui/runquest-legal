@@ -16,7 +16,7 @@
   <main class="container">
     <nav class="breadcrumb"><a href="./">Documents légaux</a> &nbsp;/&nbsp; Politique de confidentialité</nav>
     <h1>Politique de confidentialité</h1>
-    <p class="subtitle">Dernière mise à jour : 30 mai 2026</p>
+    <p class="subtitle">Dernière mise à jour : 21 juin 2026</p>
 
     <section class="toc">
       <h2>Sommaire</h2>
@@ -77,8 +77,20 @@
     <ul>
       <li>Les cellules (carrés de 100 m × 100 m) traversées et débloquées par vos activités</li>
       <li>Les statistiques calculées sur la base de vos activités (total de carrés débloqués, progression par zone géographique, etc.)</li>
-      <li>Votre participation aux classements par zone (commune, département, région, France) : pseudo affiché, nombre de carrés débloqués sur la période, position dans la zone. La participation est activée par défaut et peut être désactivée à tout moment depuis « Paramètres » &gt; « Préférences » (voir section 9).</li>
+      <li>Votre participation aux classements par zone (commune, département, région, France) : pseudo affiché, éventuelle photo de profil RunQuest, nombre de carrés débloqués sur la période, position dans la zone — uniquement de la donnée RunQuest, jamais votre nom ni votre photo Strava (cf. le récapitulatif « Vos données Strava » en section 2.5). La participation est en opt-in pour les nouveaux comptes : elle peut être activée ou désactivée à tout moment depuis « Paramètres » &gt; « Préférences » (voir section 9).</li>
       <li>Un indicateur d'éligibilité de chaque activité au classement, et le cas échéant la raison d'une exclusion automatique (anti-triche : vitesse irréaliste, téléportation détectée, etc.). Cet indicateur n'affecte que l'apparition de l'activité dans les classements ; l'activité reste visible sur votre carte personnelle.</li>
+    </ul>
+
+    <h3 id="strava">2.5 Récapitulatif : vos données Strava</h3>
+    <p>RunQuest est une application tierce connectée à l'API officielle de Strava. Ce récapitulatif regroupe, en un seul endroit, l'essentiel concernant vos données Strava :</p>
+    <ul>
+      <li><strong>Connexion facultative, en lecture seule.</strong> La liaison à Strava est optionnelle et intervient après la création de votre compte, via OAuth. RunQuest ne demande qu'une autorisation de <strong>lecture</strong> de vos activités (<code>activity:read_all</code>) et <strong>n'écrit jamais rien sur Strava</strong> : rien n'est publié, modifié ni supprimé sur votre compte Strava.</li>
+      <li><strong>Données récupérées.</strong> Profil de base (identifiant Strava, prénom, nom, photo, ville, pays, e-mail si Strava le transmet) et, pour chaque activité, ses métadonnées (date, durée, distance, dénivelé, type) ainsi que sa trace GPS — cf. sections 2.1 et 2.2.</li>
+      <li><strong>Usage strictement limité.</strong> Ces données servent uniquement à calculer votre carte de territoire, vos statistiques, vos succès et vos défis.</li>
+      <li><strong>Jamais partagées avec d'autres utilisateurs.</strong> Vos données Strava ne sont affichées qu'à vous. Elles ne sont jamais montrées à d'autres utilisateurs — les classements n'affichent que des données RunQuest (votre pseudo et votre éventuelle photo RunQuest) — ni vendues, ni cédées à des tiers.</li>
+      <li><strong>Aucun usage d'intelligence artificielle.</strong> Vos données Strava ne sont jamais utilisées pour entraîner des modèles d'intelligence artificielle ou d'apprentissage automatique.</li>
+      <li><strong>Conservation et révocation.</strong> Les jetons d'accès sont conservés tant que la connexion Strava est active. Vous pouvez révoquer cet accès à tout moment depuis les réglages de votre compte Strava ; la suppression de votre compte RunQuest révoque automatiquement cet accès et efface les jetons (cf. section 6).</li>
+      <li><strong>Conformité.</strong> L'utilisation de l'API Strava par RunQuest respecte l'API Agreement et l'API Policy de Strava. Voir la <a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener">politique de confidentialité de Strava</a>.</li>
     </ul>
 
     <div class="callout">
@@ -94,7 +106,7 @@
         <tr><td>Fournir le service de carte quadrillée et de progression personnelle</td><td>Exécution du contrat (Art. 6.1.b)</td></tr>
         <tr><td>Synchroniser vos activités depuis Strava</td><td>Exécution du contrat (Art. 6.1.b)</td></tr>
         <tr><td>Maintenir votre compte utilisateur</td><td>Exécution du contrat (Art. 6.1.b)</td></tr>
-        <tr><td>Afficher votre participation aux classements par zone (pseudo + nombre de carrés)</td><td>Exécution du contrat (Art. 6.1.b), désactivable à tout moment (opt-out)</td></tr>
+        <tr><td>Afficher votre participation aux classements par zone (pseudo + nombre de carrés)</td><td>Consentement (Art. 6.1.a), retirable à tout moment (opt-in)</td></tr>
         <tr><td>Détecter automatiquement les activités non éligibles aux classements (anti-triche)</td><td>Intérêt légitime à préserver l'équité des classements (Art. 6.1.f)</td></tr>
         <tr><td>Diagnostiquer les erreurs et les plantages de l'application (Sentry)</td><td>Intérêt légitime à maintenir un service fiable (Art. 6.1.f)</td></tr>
         <tr><td>Maintenance technique, sécurité et lutte contre la fraude</td><td>Intérêt légitime (Art. 6.1.f)</td></tr>
@@ -129,7 +141,7 @@
     <ul>
       <li><strong>Pendant l'utilisation du service</strong> : vos données sont conservées tant que votre compte est actif.</li>
       <li><strong>Après suppression de compte</strong> : vos données sont conservées pendant <strong>30 jours</strong>, puis définitivement effacées de nos bases. Cette durée permet de gérer les éventuelles demandes de récupération en cas de suppression accidentelle.</li>
-      <li><strong>Jetons Strava</strong> : conservés tant que la connexion Strava est active. Vous pouvez révoquer cet accès à tout moment depuis les paramètres de votre compte Strava.</li>
+      <li><strong>Jetons Strava</strong> : conservés tant que la connexion Strava est active. La suppression de votre compte RunQuest <strong>révoque automatiquement l'accès OAuth accordé à RunQuest sur votre compte Strava</strong> (appel à l'endpoint de révocation de l'API Strava) et les jetons sont effacés de nos bases. Vous pouvez par ailleurs révoquer cet accès à tout moment depuis les paramètres de votre compte Strava.</li>
     </ul>
 
     <h2 id="securite">7. Sécurité</h2>
@@ -165,8 +177,8 @@
     <ul>
       <li><strong>Vos traces GPS et votre carte de territoire restent privées.</strong> Aucun autre utilisateur ne peut consulter vos traces, votre carte personnelle ni le détail de vos activités. Vos traces GPS ne sont jamais partagées avec des tiers à des fins commerciales et aucun affichage public n'est effectué sans votre consentement explicite.</li>
       <li><strong>Fonctionnalité de partage d'image (opt-in).</strong> L'Application vous permet de générer un visuel stylisé représentant votre territoire ou une activité, pour le partager si vous le souhaitez sur les réseaux sociaux. Ce partage est exclusivement à votre initiative ; rien n'est publié automatiquement.</li>
-      <li><strong>Classements par zone (opt-out).</strong> Depuis la version 1.1.0, RunQuest propose des classements par zone géographique (commune, département, région, France). Y sont visibles, pour les autres utilisateurs participant au même classement : votre <strong>pseudo</strong>, le <strong>nombre de carrés débloqués</strong> sur la période et votre <strong>position</strong> dans la zone. Vos traces GPS, le détail de vos activités et la composition exacte de votre carte ne sont jamais exposés via les classements.</li>
-      <li><strong>Choix du pseudo.</strong> Vous pouvez définir un pseudo dans « Paramètres » &gt; « Mon profil ». À défaut, le nom d'affichage de votre compte Strava (ou le prénom de votre compte Apple / Google si vous n'avez pas connecté Strava) est utilisé comme repli, afin que vous ne soyez pas désigné par un identifiant technique.</li>
+      <li><strong>Classements par zone (opt-in).</strong> Depuis la version 1.1.0, RunQuest propose des classements par zone géographique (commune, département, région, France). Y sont visibles, pour les autres utilisateurs participant au même classement : votre <strong>pseudo</strong>, votre éventuelle <strong>photo de profil RunQuest</strong> (uniquement si vous en avez défini une dans l'Application), le <strong>nombre de carrés débloqués</strong> sur la période et votre <strong>position</strong> dans la zone. Aucune donnée issue de votre compte Strava (nom Strava, photo Strava) n'est affichée aux autres utilisateurs. Vos traces GPS, le détail de vos activités et la composition exacte de votre carte ne sont jamais exposés via les classements.</li>
+      <li><strong>Choix du pseudo.</strong> Vous pouvez définir un pseudo dans « Paramètres » &gt; « Mon profil ». À défaut, le nom d'affichage de votre compte RunQuest (celui que vous avez renseigné lors de votre inscription par e-mail, ou fourni par votre compte Apple / Google) est utilisé comme repli, afin que vous ne soyez pas désigné par un identifiant technique.</li>
       <li><strong>Désactiver la participation.</strong> Vous pouvez à tout moment vous retirer des classements depuis « Paramètres » &gt; « Préférences ». Dans ce cas, vous n'apparaissez plus dans les classements des autres utilisateurs et les classements ne s'affichent plus dans votre application.</li>
     </ul>
 
